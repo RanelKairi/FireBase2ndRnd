@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+    <header>
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2023/01/03/Flower-one-line-drawing-minimalism-art-Graphics-56082565-1-312x208.png" alt="Logo" class="logo">
+        <h2 id="status">Status: Signed In</h2>
+        <h3 id="username"></h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="admin.html">Home</a></li>
+            <li><a href="javascript:void(0);" id="client-view">Client View</a></li>
+            <li><a href="javascript:void(0);" id="add-product-btn">Add Product</a></li>
+            <li><a href="javascript:void(0);" id="users-table">Users Table</a></li>
+            <li><a href="javascript:void(0);" id="theme-toggle">Toggle Theme</a></li>
+        </ul>
+        <div id="sign-btns">
+            <button id="signin3" style="display:none;">Sign In</button>
+            <button id="signout">Sign Out</button>
+        </div>
+    </nav>
+    <div class="admin-content">
+        <div class="user-management">
+            <div class = "addAd"></div>
+        <div class="user-management2">
+            <h3>User Management</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                        <th>Document ID</th>
+                        <th>Picture</th>
+                    </tr>
+                </thead>
+                <tbody class="user-table-body">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <div class="admin-products-container">Admin Product Display Area</div>
+    </div>
+    
+    
+    <footer>
+        <p>&copy; 2024 My E-commerce Site</p>
+    </footer>
+    <script type="module" src="/App/admin/admin.js"></script>
+</body>
+</html>

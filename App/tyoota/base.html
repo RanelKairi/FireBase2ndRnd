@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Page</title>
+</head>
+<body>
+    <header>
+        <h2 id="status"></h2>
+        <h3 id="username"></h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="html3.html">Home</a></li>
+            <li><a href="javascript:void(0);" id="home2">Home2</a></li>
+            <li><button id="theme-toggle">Toggle Dark Mode</button></li>
+        </ul>
+        <div id="admin-only">
+            <a id="addp">Add Products</a>
+            <a href="admin/admin.html">Admin Page</a>
+            <a href="admin/adminjehri.html">Super Jehri Admin Page</a>
+        </div>
+        <div id="sign-btns">
+            <button id="signout">Sign Out</button>
+            <button id="signin3">Sign in</button>
+        </div>
+    </nav>
+    <div id="body">
+        <div id="products-body">Product Display Area</div>
+        <div class="login-container" style="display:none;">
+            Email:<input id="email2" type="email"><br>
+            Password:<input id="password2" type="password"><br>
+            <button id="signin2">Sign In</button>
+            <a href="html.html" id="signSquare">Don't have an account? Sign up</a>
+        </div>
+        <div class="signup-container" style="display:none;">
+            Name:<input id="name" type="text"><br>
+            Email:<input id="email" type="email"><br>
+            Password:<input id="password" type="password"><br>
+            ID:<input id="SN" type="text"><br>
+            Gender:<select id="gender">
+                <option value="men">Male</option>
+                <option value="women">Female</option>
+            </select><br>
+            <button id="signup">Signup</button>
+            <a href="html2.html" id="signSquare2">Already have an account? Sign in</a>
+        </div>
+        <div class="products-container"></div>
+        <script type="module" src="nonAdmin.js"></script>
+    </div>
+</body>
+</html>

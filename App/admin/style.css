@@ -1,0 +1,504 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1e90ff;
+    --background-dark: #333;
+    --background-light: #f5f5f5;
+    --text-dark: #e0e0e0;
+    --text-light: #333;
+    --input-background-dark: #121212;
+    --input-background-light: #fff;
+    --input-text-dark: #e0e0e0;
+    --input-text-light: #333;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+
+nav {
+    background-color: #1c1c1c;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #fff;
+    background-color: #4682b4;
+}
+
+#sign-btns button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sign-btns button:hover {
+    background-color: #4682b4;
+}
+
+.client-products-container, .admin-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    width: 200px;
+    background-color: #fff;
+}
+
+body.dark-mode .product-card {
+    background-color: var(--background-dark);
+    border-color: var(--input-background-dark);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-dark); 
+    border-radius: 10px; 
+    margin: 50px auto; 
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+body:not(.dark-mode) .sign-in-form {
+    background-color: var(--background-light); 
+}
+
+.sign-in-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 22px); 
+    background-color: var(--input-background-dark); 
+    color: var(--input-text-dark);
+}
+
+body:not(.dark-mode) .sign-in-form input {
+    background-color: var(--input-background-light);
+    color: var(--input-text-light);
+}
+
+.sign-in-form button {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-form button:hover {
+    background-color: #4682b4;
+}
+
+.sign-in-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.sign-in-form a:hover {
+    text-decoration: underline;
+}
+
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-dark);
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body:not(.dark-mode) .add-product-form {
+    background-color: var(--background-light);
+}
+
+.add-product-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    background-color: var(--input-background-dark);
+    color: var(--input-text-dark);
+}
+
+body:not(.dark-mode) .add-product-form input {
+    background-color: var(--input-background-light);
+    color: var(--input-text-light);
+}
+
+.add-product-form button {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-product-form button:hover {
+    background-color: #4682b4;
+}
+
+
+.edit-product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-dark); 
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+body:not(.dark-mode) .edit-product-form {
+    background-color: var(--background-light);
+}
+
+.edit-product-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    background-color: var(--input-background-dark);
+    color: var(--input-text-dark);
+}
+
+body:not(.dark-mode) .edit-product-form input {
+    background-color: var(--input-background-light); 
+    color: var(--input-text-light);
+}
+
+.edit-product-form button {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-product-form button:hover {
+    background-color: #4682b4;
+}
+
+
+.product-card .product-details button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.product-card .product-details .edit-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.product-card .product-details .edit-btn:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+
+.product-card .product-details .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.product-card .product-details .delete-btn:hover {
+    background-color: #e53935;
+    color: #fff;
+}
+
+.user-management {
+    margin-bottom: 20px;
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management th, .user-management td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.user-management th {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.user-management td {
+    background-color: #fff;
+}
+
+body.dark-mode .user-management th {
+    background-color: #121212;
+}
+
+body.dark-mode .user-management td {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.action-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.user-management th, .user-management td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center; 
+}
+
+.user-management .email-update-btn,
+.user-management .name-update-btn {
+    background: #45a049;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-management .email-update-btn:hover,
+.user-management .name-update-btn:hover {
+    background-color: #4682b4;
+}
+
+.user-management .delete-btn {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-management .delete-btn:hover {
+    background-color: #e53935;
+}
+#AddAdmin {
+    display: block;
+    margin: 20px auto;
+    background: #45a049;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+#AddAdmin:hover {
+    background-color: #4682b4;
+}
+
+
+.sign-up-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-dark);
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body:not(.dark-mode) .sign-up-cont {
+    background-color: var(--background-light);
+}
+
+.sign-up-cont input, .sign-up-cont select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    background-color: var(--input-background-dark);
+    color: var(--input-text-dark);
+}
+
+body:not(.dark-mode) .sign-up-cont input, 
+body:not(.dark-mode) .sign-up-cont select {
+    background-color: var(--input-background-light);
+    color: var(--input-text-light);
+}
+
+.sign-up-cont button {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-up-cont button:hover {
+    background-color: #4682b4;
+}
+
+#hideAdmin {
+    display: block;
+    margin: 20px auto;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+#hideAdmin:hover {
+    background-color: #4682b4;
+}
